@@ -1,0 +1,262 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f5ed;
+  color: #34483c;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* LOGIN */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  background: #fffef9;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px #34483c15;
+  text-align: center;
+}
+
+.auth-card h1 {
+  color: #6c8b72;
+  font-size: 34px;
+  letter-spacing: 3px;
+}
+
+.tagline {
+  color: #8b9c88;
+  margin-bottom: 25px;
+}
+
+.auth-card h2 {
+  margin-bottom: 8px;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce4d8;
+  border-radius: 10px;
+  background: #fff;
+  font-family: inherit;
+  outline: none;
+}
+
+input:focus {
+  border-color: #78977d;
+}
+
+button {
+  padding: 13px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #78977d;
+  color: white;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5d7b63;
+}
+
+.auth-card a {
+  color: #66876d;
+  font-weight: 600;
+}
+
+.auth-card > p {
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.message {
+  color: #a45e4c;
+}
+
+/* HEADER */
+#appPage {
+  max-width: 1050px;
+  margin: auto;
+  padding: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  color: #6c8b72;
+  letter-spacing: 3px;
+}
+
+header p {
+  color: #82927f;
+  font-size: 13px;
+}
+
+.logout {
+  background: #d9a49a;
+}
+
+.welcome {
+  background: #e5eddf;
+  padding: 30px;
+  border-radius: 18px;
+  margin: 20px 0;
+}
+
+.welcome h2 {
+  margin-bottom: 8px;
+}
+
+/* RINGKASAN */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: #fffef9;
+  padding: 22px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px #34483c0d;
+}
+
+.stat-card h3 {
+  font-size: 30px;
+  color: #78977d;
+}
+
+.stat-card p {
+  font-size: 13px;
+}
+
+/* PANEL */
+.panel {
+  background: #fffef9;
+  padding: 25px;
+  border-radius: 18px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px #34483c0d;
+}
+
+.panel h2 {
+  margin-bottom: 18px;
+}
+
+.add-form {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr auto;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  margin-top: 10px;
+  background: #f2f5ed;
+  border-radius: 12px;
+}
+
+.item-info {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.item-info small {
+  display: block;
+  color: #819080;
+  margin-top: 5px;
+}
+
+.item-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.item-actions button {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.delete {
+  background: #d9a49a;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #8b9988;
+  font-size: 12px;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 650px) {
+  #appPage {
+    padding: 15px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .add-form {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-card {
+    padding: 25px;
+  }
+
+  .item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .item-actions {
+    width: 100%;
+  }
+}
