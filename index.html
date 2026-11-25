@@ -4,109 +4,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TIMORA | Your Time, Your Priority</title>
+  <title>TIMEORA - Your Time, Your Priority</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HALAMAN LOGIN -->
-  <section id="authPage" class="auth-page">
-    <div class="auth-card">
-      <h1>TIMORA</h1>
-      <p class="tagline">Your Time, Your Priority</p>
-
-      <h2>Welcome!</h2>
-      <p>Atur waktumu, capai tujuanmu.</p>
-
-      <form id="loginForm">
-        <input id="loginEmail" type="email"
-          placeholder="Email" required>
-        <input id="loginPassword" type="password"
-          placeholder="Password" required>
-        <button type="submit">Login</button>
-      </form>
-
-      <p>Belum punya akun?
-        <a href="#" id="showRegister">Daftar di sini</a>
-      </p>
-
-      <form id="registerForm" class="hidden">
-        <input id="registerName" type="text"
-          placeholder="Nama lengkap" required>
-        <input id="registerEmail" type="email"
-          placeholder="Email" required>
-        <input id="registerPassword" type="password"
-          placeholder="Password (minimal 6 karakter)" minlength="6" required>
-        <button type="submit">Buat Akun</button>
-      </form>
-
-      <p id="authMessage" class="message"></p>
+  <header class="header">
+    <div>
+      <h1>TIMEORA</h1>
+      <p>Your Time, Your Priority</p>
     </div>
-  </section>
+    <span class="date" id="today"></span>
+  </header>
 
-  <!-- HALAMAN UTAMA -->
-  <main id="appPage" class="hidden">
-
-    <header>
-      <div>
-        <h1>TIMORA</h1>
-        <p>Your Time, Your Priority</p>
-      </div>
-      <button id="logoutButton" class="logout">Logout</button>
-    </header>
+  <main class="container">
 
     <section class="welcome">
-      <h2>Halo, <span id="userName">Pengguna</span>!</h2>
-      <p>Siap mengatur harimu menjadi lebih produktif?</p>
+      <h2>Selamat datang! 🌷</h2>
+      <p>Atur waktumu dan wujudkan harimu yang produktif.</p>
     </section>
 
-    <!-- RINGKASAN -->
     <section class="stats">
-      <div class="stat-card">
-        <h3 id="totalTasks">0</h3>
+      <div class="card">
+        <h2 id="totalTasks">0</h2>
         <p>Total Tugas</p>
       </div>
-      <div class="stat-card">
-        <h3 id="completedTasks">0</h3>
-        <p>Tugas Selesai</p>
+      <div class="card">
+        <h2 id="completedTasks">0</h2>
+        <p>Selesai</p>
       </div>
-      <div class="stat-card">
-        <h3 id="pendingTasks">0</h3>
+      <div class="card">
+        <h2 id="pendingTasks">0</h2>
         <p>Belum Selesai</p>
       </div>
     </section>
 
-    <!-- TUGAS -->
     <section class="panel">
-      <h2>Daftar Tugas</h2>
-      <form id="taskForm" class="add-form">
+      <h2>✦ Daftar Tugas</h2>
+
+      <form id="taskForm">
         <input id="taskTitle" type="text"
-          placeholder="Nama tugas..." required>
+          placeholder="Apa yang harus kamu kerjakan?" required>
         <input id="taskDate" type="date">
-        <button type="submit">+ Tambah</button>
+        <button type="submit">+ Tambah Tugas</button>
       </form>
+
       <div id="taskList"></div>
     </section>
 
-    <!-- JADWAL -->
     <section class="panel">
-      <h2>Jadwal Kegiatan</h2>
-      <form id="scheduleForm" class="add-form">
+      <h2>✦ Jadwal Kegiatan</h2>
+
+      <form id="scheduleForm">
         <input id="scheduleTitle" type="text"
           placeholder="Nama kegiatan..." required>
         <input id="scheduleDate" type="datetime-local" required>
-        <button type="submit">+ Tambah</button>
+        <button type="submit">+ Tambah Jadwal</button>
       </form>
+
       <div id="scheduleList"></div>
     </section>
 
-    <footer>
-      <p>© 2026 TIMORA — Your Time, Your Priority</p>
-    </footer>
-
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <footer>
+    <p>TIMEORA © 2026 | Make Your Time Meaningful</p>
+  </footer>
+
   <script src="app.js"></script>
 </body>
 </html>
